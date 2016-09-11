@@ -4317,3 +4317,383 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 01:47:39 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 01:47:39 -0700
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:27:53 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `charge_user' for Transaction(Table doesn't exist):Class):
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTransactions (20160911092837)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160911092837"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:29:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `charge_user' for #<Class:0x007ff9b31dd878>):
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.2ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:30:26 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 4ms
+
+NameError (undefined local variable or method `current_user' for #<Class:0x007ff9b29a2550>):
+  app/models/transaction.rb:4:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.6ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:30:44 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `braintree_id' for nil:NilClass):
+  app/models/transaction.rb:5:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.4ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:31:18 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `current_user' for #<Class:0x007ff9b5c15258>):
+  app/models/transaction.rb:4:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.2ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:31:59 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `current_user' for #<Class:0x007ff9b3e1cfa8>):
+  app/models/transaction.rb:4:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.6ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:32:17 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `braintree_id' for :current_user:Symbol):
+  app/models/transaction.rb:5:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.6ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:32:47 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `braintree_id' for :current_user:Symbol):
+  app/models/transaction.rb:5:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:32:59 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `email' for :current_user:Symbol):
+  app/models/transaction.rb:3:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.5ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:33:11 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `email' for nil:NilClass):
+  app/models/transaction.rb:3:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.1ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:34:35 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant Transaction::Application):
+  app/models/transaction.rb:2:in `<class:Transaction>'
+  app/models/transaction.rb:1:in `<top (required)>'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.7ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:35:57 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `current_user' for #<Class:0x007ff9b36b5968>):
+  app/models/transaction.rb:3:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.2ms)
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:36:05 -0700
+Processing by SnoozesController#first as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `current_user' for #<Class:0x007ff9b3b60878>):
+  app/models/transaction.rb:5:in `charge_user'
+  app/controllers/snoozes_controller.rb:5:in `first'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-11 02:36:15 -0700
+Processing by GifController#cool as HTML
+  [1m[35mUser Load (5.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered gif/cool.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 448ms (Views: 423.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 02:36:16 -0700
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:38:48 -0700
+Processing by SnoozesController#first as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered snoozes/first.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 459ms (Views: 11.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 02:38:49 -0700
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2016-09-11 02:39:06 -0700
+Processing by TransactionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered transactions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 142ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:07 -0700
+
+
+Started POST "/transactions" for 127.0.0.1 at 2016-09-11 02:39:14 -0700
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zwEoBojPyfpYDbKGdOkZ2akYZwFl1GZZBItner3RBjw=", "payment_method_nonce"=>"0b61b812-c8df-4c2e-b1ef-897c98cb06bb"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 404ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+Processing by GifController#cool as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered gif/cool.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:15 -0700
+
+
+Started GET "/snoozes/first" for 127.0.0.1 at 2016-09-11 02:39:19 -0700
+Processing by SnoozesController#first as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered snoozes/first.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 475ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 02:39:20 -0700

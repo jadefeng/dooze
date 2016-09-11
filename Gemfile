@@ -28,6 +28,7 @@
     # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
     gem 'jbuilder', '~> 1.2'
 
+
     group :doc do
       # bundle exec rake doc:rails generates the API under doc/api.
       gem 'sdoc', require: false
@@ -38,6 +39,7 @@
     gem 'gon', '~> 5.1.2'
 
     gem 'braintree'
+    gem 'twilio-ruby'
     # Use unicorn as the app server
     # gem 'unicorn'
 
