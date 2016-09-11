@@ -3,6 +3,7 @@ GifVault::Application.routes.draw do
   get "snoozes/first"
   get "snoozes/second"
   get "snoozes/third"
+  post '/sms' => 'snoozes#sms'
   root to: 'gif#cool'
 
   get '/login' => 'sessions#new'
@@ -17,6 +18,8 @@ GifVault::Application.routes.draw do
   get '/users' => 'users#show'
   get '/users/addTime' => 'users#addTime'
   post '/users/addTime' => 'users#addTime'
+
+
 
   get '/cool' => 'gif#cool'  
   get '/sweet' => 'gif#sweet'

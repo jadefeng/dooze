@@ -4,11 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-    puts "HELLO THIS IS BEING CALLED"
-    if session[:user_id]
-      puts "HELLO STILL GOING"
-      puts session[:user_id]
-      @current_user ||= User.find(session[:user_id]) 
+    if session[:user_id] && (User.all.count!=0)
+      puts User.find(session[:user_id])
+      if User.find(session[:user_id]) 
+        @current_user = User.find(session[:user_id])
+       else
+        @current_user = false
+       end
     end
   end
   helper_method :current_user
