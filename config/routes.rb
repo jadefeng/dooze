@@ -1,5 +1,8 @@
 GifVault::Application.routes.draw do
 
+  get "snoozes/first"
+  get "snoozes/second"
+  get "snoozes/third"
   root to: 'gif#cool'
 
   get '/login' => 'sessions#new'

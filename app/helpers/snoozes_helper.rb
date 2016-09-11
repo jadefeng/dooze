@@ -1,0 +1,2 @@
+module SnoozesHelper
+end
