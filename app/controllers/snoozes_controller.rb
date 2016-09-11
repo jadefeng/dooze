@@ -1,4 +1,6 @@
 class SnoozesController < ApplicationController
+	skip_before_filter  :verify_authenticity_token
+
   def first
   	# charge money
   	puts "GONNA CHARGE THEM MONEY! FIRST SNOOZE"
@@ -12,15 +14,12 @@ class SnoozesController < ApplicationController
   	Transaction.charge_user(5.00, current_user)
   	# send twilio
 
-  	# MO'S ACC
-	# account_sid = 'ACf300bfeed24ce57a555d6595534b3381'
-	# auth_token = 'b28595ac7328abc19c2fdc70f9df70eb'
-
   	# JADE ACC
-	account_sid = 'AC10f0217b511b0dc610e7c084e5aaf92f'
-	auth_token = '12a4d1bb986ac4657d7598fa8a61d8e6'
+	account_sid = 'ACebc58fffd7d948fab770dc1465230e9d'
+	auth_token = '15e11a3f3664f4da314c49cf53842185'
 
 	@client = Twilio::REST::Client.new(account_sid, auth_token)
+	$client = @client
 	puts "CLIENT IS #{@client}"
 
 	threshold = 1
@@ -37,7 +36,7 @@ class SnoozesController < ApplicationController
 	  @client.account.messages.create(
 	  	body: 'Your friend Jade has been snoozing for 30 minutes. Type CALL to wake her up through an automated call.',
 	    to: '+16282208811',
-	    from: '+15005550006')
+	    from: '+16282222767')
 	    # from: '+14154291817')
 	  puts "JUST SENT THEM TEXT MESSAGE"
 	end
@@ -49,12 +48,13 @@ class SnoozesController < ApplicationController
 	    puts "THEY REPLIED SAYING #{inbound_sms}"
 
 	    if inbound_sms.to_s == 'CALL'
-	      puts "HELLO THIS IS FUCKED UP SHIT"
-	      call = @client.account.calls.create(
-		      from: '+15005550006',
+	      puts "The client is #{$client}"
+	      call = $client.account.calls.create(
+		      from: '+16282222767',
 		      # from: '+14154291817',
 		      to: '+16282208811',
-		      url: 'https://handler.twilio.com/twiml/EHff1643465456dc29f1e82bb6a05557bd'
+		      # url: 'https://handler.twilio.com/twiml/EHff1643465456dc29f1e82bb6a05557bd'
+		      url: 'https://handler.twilio.com/twiml/EH4df330e45ba345f3828ca59be4875baf'
 		  	)
 	    puts "GONNA CALL NOW!!!"
 	      Twilio::TwiML::Response.new(call)

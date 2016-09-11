@@ -6287,3 +6287,315 @@ Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 04:59:5
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 04:59:52 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-11 06:49:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GifController#cool as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered gif/cool.html.erb within layouts/application (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 101ms (Views: 73.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 06:49:18 -0700
+
+
+Started GET "/snoozes/second" for 127.0.0.1 at 2016-09-11 06:49:25 -0700
+Processing by SnoozesController#second as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1392ms
+
+Twilio::REST::RequestError (The From phone number +16282222757 is not a valid, SMS-capable inbound phone number or short code for your account.):
+  app/controllers/snoozes_controller.rb:33:in `second'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.4ms)
+
+
+Started GET "/snoozes/second" for 127.0.0.1 at 2016-09-11 06:50:02 -0700
+Processing by SnoozesController#second as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered snoozes/second.html.erb within layouts/application (0.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 974ms (Views: 15.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 06:50:04 -0700
+
+
+Started POST "/sms" for 54.197.220.78 at 2016-09-11 06:50:22 -0700
+Processing by SnoozesController#sms as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SMcbd7cad4322d77ab92d46ad58448e32f", "NumMedia"=>"0", "ToCity"=>"San Francisco", "FromZip"=>"", "SmsSid"=>"SMcbd7cad4322d77ab92d46ad58448e32f", "FromState"=>"CA", "SmsStatus"=>"received", "FromCity"=>"San Francisco", "Body"=>"CALL", "FromCountry"=>"US", "To"=>"+16282222767", "ToZip"=>"94103", "NumSegments"=>"1", "MessageSid"=>"SMcbd7cad4322d77ab92d46ad58448e32f", "AccountSid"=>"ACebc58fffd7d948fab770dc1465230e9d", "From"=>"+16282208811", "ApiVersion"=>"2010-04-01"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.0.4) lib/action_controller/metal/request_forgery_protection.rb:166:in `handle_unverified_request'
+  actionpack (4.0.4) lib/action_controller/metal/request_forgery_protection.rb:173:in `handle_unverified_request'
+  actionpack (4.0.4) lib/action_controller/metal/request_forgery_protection.rb:180:in `verify_authenticity_token'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:377:in `_run__2711276404420536205__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3934160172822059942__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.2.0) lib/request_store/middleware.rb:8:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jadefeng/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jadefeng/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jadefeng/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started GET "/snoozes/second" for 127.0.0.1 at 2016-09-11 06:52:45 -0700
+Processing by SnoozesController#second as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered snoozes/second.html.erb within layouts/application (0.1ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1329ms (Views: 13.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 06:52:47 -0700
+
+
+Started POST "/sms" for 52.90.168.160 at 2016-09-11 06:52:54 -0700
+Processing by SnoozesController#sms as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM606b5941fcad5567147f5af4c94b185a", "NumMedia"=>"0", "ToCity"=>"San Francisco", "FromZip"=>"", "SmsSid"=>"SM606b5941fcad5567147f5af4c94b185a", "FromState"=>"CA", "SmsStatus"=>"received", "FromCity"=>"San Francisco", "Body"=>"CALL", "FromCountry"=>"US", "To"=>"+16282222767", "ToZip"=>"94103", "NumSegments"=>"1", "MessageSid"=>"SM606b5941fcad5567147f5af4c94b185a", "AccountSid"=>"ACebc58fffd7d948fab770dc1465230e9d", "From"=>"+16282208811", "ApiVersion"=>"2010-04-01"}
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `account' for nil:NilClass):
+  app/controllers/snoozes_controller.rb:51:in `sms'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.3ms)
+
+
+Started GET "/snoozes/second" for 127.0.0.1 at 2016-09-11 06:54:43 -0700
+Processing by SnoozesController#second as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered snoozes/second.html.erb within layouts/application (0.1ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 971ms (Views: 14.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/snoozes.css?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/snoozes.js?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-09-11 06:54:45 -0700
+
+
+Started POST "/sms" for 54.87.249.201 at 2016-09-11 06:54:51 -0700
+Processing by SnoozesController#sms as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM3ee02df338ae66d8927af51947796074", "NumMedia"=>"0", "ToCity"=>"San Francisco", "FromZip"=>"", "SmsSid"=>"SM3ee02df338ae66d8927af51947796074", "FromState"=>"CA", "SmsStatus"=>"received", "FromCity"=>"San Francisco", "Body"=>"CALL", "FromCountry"=>"US", "To"=>"+16282222767", "ToZip"=>"94103", "NumSegments"=>"1", "MessageSid"=>"SM3ee02df338ae66d8927af51947796074", "AccountSid"=>"ACebc58fffd7d948fab770dc1465230e9d", "From"=>"+16282208811", "ApiVersion"=>"2010-04-01"}
+Completed 500 Internal Server Error in 594ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/snoozes_controller.rb:60:in `new'
+  app/controllers/snoozes_controller.rb:60:in `sms'
+
+
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.2ms)
+  Rendered /Users/jadefeng/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.9ms)
