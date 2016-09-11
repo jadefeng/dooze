@@ -11,7 +11,7 @@
 </head>
 <body>
 
-
+<div class="container">
 <% if current_user %>
   Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
 <% else %>
@@ -20,5 +20,6 @@
 
 <%= yield %>
 
+</div>
 </body>
 </html>

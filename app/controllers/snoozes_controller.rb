@@ -32,9 +32,11 @@ class SnoozesController < ApplicationController
 
 	activate, start_time = timer(1)
 
+	sleeping_name = current_user.name
+
 	if threshold >= (activate - start_time)
 	  @client.account.messages.create(
-	  	body: 'Your friend Jade has been snoozing for 30 minutes. Type CALL to wake her up through an automated call.',
+	  	body: 'Your friend ' + sleeping_name + ' has been snoozing for 30 minutes. Type CALL to wake her up through an automated call.',
 	    to: '+16282208811',
 	    from: '+16282222767')
 	    # from: '+14154291817')
@@ -52,7 +54,8 @@ class SnoozesController < ApplicationController
 	      call = $client.account.calls.create(
 		      from: '+16282222767',
 		      # from: '+14154291817',
-		      to: '+16282208811',
+		      # to: '+16282208811',
+		      to: '+14155590851',
 		      # url: 'https://handler.twilio.com/twiml/EHff1643465456dc29f1e82bb6a05557bd'
 		      url: 'https://handler.twilio.com/twiml/EH4df330e45ba345f3828ca59be4875baf'
 		  	)

@@ -4,7 +4,7 @@
 
     # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
     # gem 'ruby', '2.0.2'
-    gem 'rails', '> 4.0.2'
+    gem 'rails', '> 4.1.9'
 
     # Use sqlite3 as the database for Active Record
     # gem 'sqlite3'
@@ -45,6 +45,12 @@
 
     gem 'braintree'
     gem 'twilio-ruby'
+
+    gem  'actionpack'
+    gem 'activesupport'
+
+    gem "twitter-bootstrap-rails"
+
     # Use unicorn as the app server
     # gem 'unicorn'
 
