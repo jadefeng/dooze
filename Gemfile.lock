@@ -128,7 +128,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   pg
-  rails
+  rails (> 4.0.2)
   sass-rails (~> 4.0.2)
   sdoc
   turbolinks
