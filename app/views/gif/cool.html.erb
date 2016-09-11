@@ -1,0 +1,29 @@
+<script>
+var clientToken = Braintree::ClientToken.generate
+console.log(clientToken);
+braintree.setup(clientToken, 'dropin', {
+  container: 'dropin-container'
+});
+
+</script>
+
+<h1>COOL!</h1>
+
+<%= image_tag "http://paulrobertson.mechafetus.com/meowmeow.gif" %>
+<br>
+<br>
+
+<%= link_to 'Sweet', '/sweet' %>
+
+<div class="form-container radius-box glassy-bg small-10 small-centered medium-8 large-6 columns">
+  <h2 class="mbs">New Transaction</h2>
+  <%= form_tag transactions_path do%>
+    <p>Please enter your payment details:</p>
+    
+    <div id="dropin-container"></div>
+
+    <%=submit_tag "Save Details", class: "button mt1" %>
+  <%end%>
+</div>
+
+

@@ -1,0 +1,18 @@
+<h1>Transactions#new</h1>
+<p>Find me in app/views/transactions/new.html.erb</p>
+<script type="text/javascript">
+	braintree.setup('<%= @client_token %>', 'dropin', {
+	  container: 'dropin'
+	});
+</script>
+
+<div class="form-container radius-box glassy-bg small-10 small-centered medium-8 large-6 columns">
+  <h2 class="mbs">New Transaction</h2>
+  <%= form_tag transactions_path do%>
+  	 <%= render "customer_form" unless current_user.has_payment_info? %>
+
+    <p>Please enter your payment details:</p>
+    <div id="dropin"></div>
+    <%=submit_tag "Add Credit Card", class: "button mt1" %>
+  <%end%>
+</div>
