@@ -22,7 +22,7 @@ No information
 
 1. [Jade Feng](https://github.com/jadefeng)
 2. [Muhammed Guelen](https://github.com/mguelen)
-3. [Junshu Okamoto](https://github.com/imtiana)
+3. [Junshu Okamoto](https://github.com/jun-oka)
 
 ## License
 
