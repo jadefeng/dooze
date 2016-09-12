@@ -4,14 +4,14 @@ class SnoozesController < ApplicationController
   def first
   	# charge money
   	puts "GONNA CHARGE THEM MONEY! FIRST SNOOZE"
-  	result = Transaction.charge_user(2.50, current_user)
+  	result = Transaction.charge_user(5.00, current_user)
   	result
   end
 
   def second
   	# charge them more money
   	puts "GONNA CHARGE THEM MONEY! FIRST SNOOZE"
-  	Transaction.charge_user(5.00, current_user)
+  	Transaction.charge_user(20.00, current_user)
   	# send twilio
 
   	# JADE ACC
@@ -55,7 +55,7 @@ class SnoozesController < ApplicationController
 		      from: '+16282222767',
 		      # from: '+14154291817',
 		      # to: '+16282208811',
-		      to: '+14155590851',
+		      to: '+16282208811',
 		      # url: 'https://handler.twilio.com/twiml/EHff1643465456dc29f1e82bb6a05557bd'
 		      url: 'https://handler.twilio.com/twiml/EH4df330e45ba345f3828ca59be4875baf'
 		  	)

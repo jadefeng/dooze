@@ -4,8 +4,11 @@ GifVault::Application.routes.draw do
   get "snoozes/second"
   get "snoozes/third"
   post '/sms' => 'snoozes#sms'
-  # root to: 'gif#cool'
-  root to: 'transactions#new'
+  if @current_user
+    root to: 'gif#cool'
+  else
+    root to: 'transactions#new'
+  end
    
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

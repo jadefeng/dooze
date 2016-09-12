@@ -39,26 +39,11 @@ class TransactionsController < ApplicationController
 	  end
 	end
 
-	# def charge_user(amount)
-	# 	puts "LETS CHARGE THEM $ #{amount}"
-	# 	puts "THE CURRENT USER IS #{current_user.braintree_id}"
-	# 	#payment method is stored in the vault
-	# 	result = Braintree::Transaction.sale(
-	# 	  :customer_id => current_user.braintree_id,
-	# 	  :amount => amount
-	# 	)
-	# 	if result.success?
-	# 		puts "WE JUST CHARGED THEM LOTS OF MONEY"
-	# 	else
-	# 		p result.errors
-	# 	end
-
-	# end
 
 	private
 	def generate_client_token
 	  # Braintree::ClientToken.generate
-
+	  puts "current_user is #{current_user}"
 	  if current_user.has_payment_info?
 	    Braintree::ClientToken.generate(customer_id: current_user.braintree_id)
 	  else
