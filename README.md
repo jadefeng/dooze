@@ -1,10 +1,13 @@
 # Dooze
 
 **Dooze** is an web App created at TechCrunch Disrupt Hackathon 2016.
-
+It was an exercise to build a fun project to integrate with multiple APIs:
+- Twilio API
+- Braintree API
+- Amazon Alexa API
 
 ## Inspiration
-Dooze is inspired by the fact that a vast amount of people including the creators of this product have significant problems to get up in the mornings. Nowadays, snoozing before officially getting out of bed has become a pretty standard practice. One survey found that more than a third of American adults hit the snooze button at least three times each morning, and more than half of people ages 25 to 34 press snooze daily.
+Dooze is inspired by the fact that a vast amount of people, including the creators of this product, have significant problems to get up in the mornings. Nowadays, snoozing before officially getting out of bed has become a pretty standard practice. One survey found that more than a third of American adults hit the snooze button at least three times each morning, and more than half of people ages 25 to 34 press snooze daily.
 The catch: Many sleep experts agree that hitting the snooze button contributes to a tired morning and doesn’t help us feel more rested, although we may believe the opposite is true. Dooze is supposed to solve this issue.
 
 ## What it does
@@ -15,8 +18,12 @@ If you pass a certain threshold, Dooze will automatically notify a friend a frie
 Dooze leverages three APIs: Amazon Alexa, Twilio and Braintree. We are using JavaScript in the front-end and Ruby Rails in the backend to process server requests.
 
 ##What's next for Dooze
-No information
+Take the API keys and secret into a .yaml file. (Currently the Twilio and Braintree keys are inactive.)
 
+# Media Coverage
+
+1. [TechCrunch article](https://techcrunch.com/2016/09/11/the-alarm-clock-of-your-nightmares/)
+2. [Youtube pitch](https://www.youtube.com/watch?v=y8W6iqDuui0)
 
 ## Team Members
 
@@ -28,7 +35,7 @@ No information
 
 MIT License
 
-Copyright (c) 2016 Muhammed Guelen
+Copyright (c) 2016 Muhammed Guelen, Jade Feng, Junshu Okamoto
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
